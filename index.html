@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <title>تسجيل الدخول</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <img src="Untitled.jpeg" class="login-logo">
+    <div class="login-container">
+        <h2>تسجيل الدخول</h2>
+        <form onsubmit="return login()">
+        <label>الاسم</label>
+        <input type="text" id="username">
+
+        <label>الرقم القومي</label>
+        <input type="number" id="na-code">
+
+        <label>العنوان</label>
+        <input type="textarea" id="add"><br><br>
+
+        <input type="submit" value="دخول">
+        </form>
+    </div>
+
+        <script>
+        function login() {
+        var user = document.getElementById("username").value;
+        var na_code = document.getElementById("na-code").value;
+        var address = document.getElementById("add").value;
+
+        if(user && na_code && address) {
+            window.location.href = "https://sites.google.com/view/gradproject/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9";
+            return false;
+        } else {
+            alert("يجب ملئ جميع البيانات");
+            return false;
+        }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Tajawal', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('bg.jpg');
+    background-size: cover; /* لتغطية الخلفية بالكامل */
+    background-position: center; /* لتوسيط الصورة */
+    background-repeat: no-repeat; /* لمنع تكرار الصورة */
+    backdrop-filter: blur(5px);
+    /*background: linear-gradient(135deg, rgba(70, 111, 194, 0.8), rgba(193, 229, 155, 0.8), rgba(240, 240, 240, 0.8));*/
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    z-index: -1;
+}
+
+.login-logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.login-container {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 320px;
+    text-align: right;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="textarea"],
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="textarea"]:focus,
+input[type="number"]:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+input[type="submit"] {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(0.98);
+}
+
+input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
